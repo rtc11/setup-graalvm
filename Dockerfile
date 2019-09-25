@@ -13,5 +13,5 @@ RUN apk add --no-cache ca-certificates
 
 ADD *.sh /
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/setup-graalvm.sh"]
 CMD ["--help"]
