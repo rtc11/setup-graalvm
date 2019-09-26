@@ -11,7 +11,7 @@ LABEL "maintainer"="Robin <https://github.com/rtc11>"
 
 RUN apk add --no-cache ca-certificates
 
-ADD *.sh /
+COPY setup-graalvm.sh /usr/local/bin
 
 ENTRYPOINT ["setup-graalvm.sh"]
 CMD ["--help"]
