@@ -1,8 +1,6 @@
 #!/bin/sh
 
 set -e
-sh -c "curl --version"
-sh -c "sudo apt-get install curl"
 echo "Downloading $1"
 sh -c "curl -sL $1 --output graalvm.tar.gz"
 
