@@ -13,8 +13,8 @@ RUN apk add --no-cache ca-certificates
 
 COPY setup-graalvm.sh /usr/local/bin
 RUN chmod +x /usr/local/bin/setup-graalvm.sh
-RUN apt-get update
-RUN apt-get install curl
+RUN apk update
+RUN apk add curl
 
 ENTRYPOINT ["/usr/local/bin/setup-graalvm.sh"]
 CMD ["--help"]
